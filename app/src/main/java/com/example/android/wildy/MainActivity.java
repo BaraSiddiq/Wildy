@@ -1,7 +1,6 @@
 package com.example.android.wildy;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView txt;
     Button btn;
+    final String nintendoUrl = "https://www.nintendo.com/games/switch/";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,9 +24,8 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nintendoSwitchGamesUrl = "https://www.nintendo.com/games/switch/";
-                Intent nintendoIntent = new Intent(Intent.ACTION_VIEW);
-                nintendoIntent.setData(Uri.parse(nintendoSwitchGamesUrl));
+                Intent nintendoIntent = new Intent(MainActivity.this, NintendoWebView.class);
+                nintendoIntent.putExtra("nintendoUrl", nintendoUrl);
                 startActivity(nintendoIntent);
             }
         });
