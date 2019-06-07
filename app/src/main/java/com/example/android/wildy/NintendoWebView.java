@@ -11,15 +11,17 @@ public class NintendoWebView extends AppCompatActivity {
 
     WebView wv;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        wv = findViewById(R.id.nintendo_wv);
-        wv.setWebViewClient(new WebViewClient());
-
         setContentView(R.layout.activity_nintendo_web_view);
         Intent recievedIntent = getIntent();
         String nintendoUrl = recievedIntent.getStringExtra("nintendoUrl");
+
+        wv = findViewById(R.id.nintendo_wv);
+        wv.setWebViewClient(new WebViewClient());
+
 
         wv.loadUrl(nintendoUrl);
 
