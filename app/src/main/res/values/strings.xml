@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Wildy</string>
+    <string name="message">Click here to see the newest Nintendo Switch games</string>
+    <string name="btn_txt">Switch it</string>
 </resources>

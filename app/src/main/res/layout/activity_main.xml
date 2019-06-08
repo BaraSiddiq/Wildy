@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="monospace"
-        android:text="Nintendo Switch Games"
+        android:text="@string/message"
         android:layout_gravity="center"
         android:layout_margin="8dp"
         android:textColor="#3000"
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="64dp"
         android:background="#0AD"
-        android:text="OK"
+        android:text="@string/btn_txt"
         android:layout_gravity="center"
         android:layout_margin="8dp"
         android:textColor="#fff" />
